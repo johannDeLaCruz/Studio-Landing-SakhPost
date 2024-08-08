@@ -1,0 +1,27 @@
+{
+  "importOrder": [
+    "^react",
+    "@/components/(.*)",
+    "<THIRD_PARTY_MODULES>",
+    "@/hooks/(.*)",
+    "@/api/(.*)",
+    "@/shared/(.*)",
+    "@/helpers/(.*)",
+    "@/store/(.*)",
+    "\\.(css|scss|sass)$"
+  ],
+
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "importOrderSeparation": true,
+  "importOrderCaseInsensitive": true,
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "tabWidth": 4,
+  "useTabs": false,
+  "endOfLine": "lf",
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "semi": false
+}
