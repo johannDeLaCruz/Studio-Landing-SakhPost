@@ -1,10 +1,11 @@
-import styles from './HeroSection.module.scss'
 import HeroVideo from '@assets/videos/hero-video.mp4'
 import { VideoPlayer } from '@ui/VideoPlayer'
+import { CircleButton } from '@ui/CircleButton'
 
+import styles from './HeroSection.module.scss'
 
 export const HeroSection: React.FC = () => {
-        const videoJsOptions = {
+    const videoJsOptions = {
         autoplay: true,
         controls: false,
         responsive: true,
@@ -20,15 +21,26 @@ export const HeroSection: React.FC = () => {
     }
     return (
         <section id='hero' className={styles.root}>
-               <VideoPlayer
-                    options={videoJsOptions}
-                    wrapperStyle={{ width: '100%', height: '100%' }}
-                    // videoProps={{
-                    //     style: { objectFit: 'cover' },
-                    //     playsInline: true,
-                    // }}
-                    fillMode={"height"}                   
-                />
+            <VideoPlayer
+                options={videoJsOptions}
+                wrapperStyle={{
+                    width: '100%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    zIndex: -1,
+                }}
+                // videoProps={{
+                //     style: { objectFit: 'cover' },
+                //     playsInline: true,
+                // }}
+                fillMode={'height'}
+            />
+            <div className={styles.content}>
+                <h1 className={styles.title}>Разработка сайтов, дизайн, брендинг, продвижение</h1>
+                <CircleButton type='transparent'>начать проект</CircleButton>
+            </div>
         </section>
     )
 }

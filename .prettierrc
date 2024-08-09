@@ -14,7 +14,6 @@
     "trailingComma": "all",
     "arrowParens": "always",
     "bracketSameLine": false,
-    "plugins": ["@trivago/prettier-plugin-sort-imports"],
     "singleQuote": true,
     "importOrderSeparation": true,
     "importOrderCaseInsensitive": true,

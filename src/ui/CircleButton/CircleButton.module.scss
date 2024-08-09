@@ -1,0 +1,28 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+
+.root {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    padding: 1.125rem 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6.25rem;
+    flex-shrink: 0;
+    @include button-label;
+}
+
+.white {
+    border-radius: 6.25rem;
+    background: $bg-primary;
+    color: $text-primary;
+}
+
+.transparent {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: $bg-primary-alpha;
+    backdrop-filter: blur(calc(var(--blur-m, 24px) / 2));
+    color: $text-inverse;
+    text-align: center;
+}

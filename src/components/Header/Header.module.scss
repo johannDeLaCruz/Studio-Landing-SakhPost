@@ -1,12 +1,13 @@
-@import "@assets/styles/variables";
-@import "@assets/styles/mixins";
+@import '@assets/styles/variables';
+@import '@assets/styles/mixins';
 
 .root {
     display: flex;
-    width: 21.4375rem;
+    width: 100%;
     padding: 1rem 0rem;
+    @include global-padding;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    z-index: 100;
+    z-index: 10;
 }
