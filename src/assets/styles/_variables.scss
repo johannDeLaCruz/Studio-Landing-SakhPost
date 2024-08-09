@@ -1,0 +1,114 @@
+//Mixin for Variable Font Family
+
+@mixin onset() {
+    font-family: $ff-heading;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+}
+
+//Font-Family Variables
+$ff-heading: "Onset", sans-serif;
+
+// Background Colors
+$bg-primary: #ffffff;
+$bg-secondary: #f2f2f2;
+$bg-inverse: #0d0616;
+$bg-blackout: rgba(0, 0, 0, 0.4);
+$bg-primary-alpha: rgba(255, 255, 255, 0.15);
+$bg-inverse-alpha: rgba(13, 6, 22, 0.2);
+
+// Text Colors
+$text-primary: #0d0616;
+$text-secondary: #a09ca5;
+$text-inverse: #ffffff;
+$text-inverse-secondary: #615d67;
+
+// Icon Colors
+$icon-inverse: #ffffff;
+$icon-secondary: #ddd8e3;
+
+// Border Colors
+$border-primary: #ddd8e3;
+$border-inverse-alpha: rgba(255, 255, 255, 0.15);
+
+// Screen Breakpoints Variables
+$breakpoint-xxl: 3440px;
+$breakpoint-xl: 1920px;
+$breakpoint-lg: 1440px;
+$breakpoint-md: 1024px;
+$breakpoint-sm: 768px;
+$breakpoint-xs: 576px;
+$breakpoint-xxs: 375px;
+
+// Transition Variables
+$transition-duration-smooth: 0.3s;
+$transition-timing-smooth: ease;
+
+// Fluid Spacing Variables (max breakpoint). Example: 1920-40-48 --> it's from 1440px to 1920px with a range of 40px to 48px
+// 1920px - 1440px (xl-lg)
+$fluid-1920-152-112: clamp(7rem, -0.5rem + 8.3333vi, 9.5rem);
+$fluid-1920-120-100: clamp(6.25rem, 2.5rem + 4.1667vi, 7.5rem);
+$fluid-1920-112-88: clamp(5.5rem, 1rem + 5vi, 7rem);
+$fluid-1920-96-88: clamp(5.5rem, 4rem + 1.6667vi, 6rem);
+$fluid-1920-96-80: clamp(5rem, 2rem + 3.3333vi, 6rem);
+$fluid-1920-80-64: clamp(4rem, 1rem + 3.3333vi, 5rem);
+$fluid-1920-72-64: clamp(4rem, 2.5rem + 1.6667vi, 4.5rem);
+$fluid-1920-64-54: clamp(3.375rem, 1.5rem + 2.0833vi, 4rem);
+$fluid-1920-64-56: clamp(3.5rem, 2rem + 1.6667vi, 4rem);
+$fluid-1920-56-48: clamp(3rem, 1.5rem + 1.6667vi, 3.5rem);
+$fluid-1920-40-34: clamp(2.125rem, 1rem + 1.25vi, 2.5rem);
+$fluid-1920-40-32: clamp(2rem, 0.5rem + 1.6667vi, 2.5rem);
+$fluid-1920-48-40: clamp(2.5rem, 1rem + 1.6667vi, 3rem);
+$fluid-1920-32-24: clamp(1.5rem, 0rem + 1.6667vi, 2rem);
+$fluid-1920-28-24: clamp(1.5rem, 0.75rem + 0.8333vi, 1.75rem);
+$fluid-1920-24-22: clamp(1.375rem, 1rem + 0.4167vi, 1.5rem);
+$fluid-1920-24-20: clamp(1.25rem, 0.5rem + 0.8333vi, 1.5rem);
+$fluid-1920-20-18: clamp(1.125rem, 0.75rem + 0.4167vi, 1.25rem);
+$fluid-1920-20-16: clamp(1rem, 0.25rem + 0.8333vi, 1.25rem);
+$fluid-1920-18-16: clamp(1rem, 0.625rem + 0.4167vi, 1.125rem);
+$fluid-1920-16-14: clamp(0.875rem, 0.5rem + 0.4167vi, 1rem);
+
+// 1440px - 768px (lg-sm)
+$fluid-1440-112-64: clamp(4rem, 0.5714rem + 7.1429vi, 7rem);
+$fluid-1440-100-64: clamp(4rem, 1.4286rem + 5.3571vi, 6.25rem);
+$fluid-1440-100-56: clamp(3.5rem, 0.3571rem + 6.5476vi, 6.25rem);
+$fluid-1440-100-32: clamp(2rem, -2.8571rem + 10.119vi, 6.25rem);
+$fluid-1440-88-72: clamp(4.5rem, 3.3571rem + 2.381vi, 5.5rem);
+$fluid-1440-88-56: clamp(3.5rem, 1.2143rem + 4.7619vi, 5.5rem);
+$fluid-1440-80-24: clamp(1.5rem, -2.5rem + 8.3333vi, 5rem);
+$fluid-1440-80-48: clamp(3rem, 0.7143rem + 4.7619vi, 5rem);
+$fluid-1440-80-40: clamp(2.5rem, -0.3571rem + 5.9524vi, 5rem);
+$fluid-1440-80-56: clamp(3.5rem, 1.7857rem + 3.5714vi, 5rem);
+$fluid-1440-64-48: clamp(3rem, 1.8571rem + 2.381vi, 4rem);
+$fluid-1440-56-48: clamp(3rem, 2.4286rem + 1.1905vi, 3.5rem);
+$fluid-1440-56-40: clamp(2.5rem, 1.3571rem + 2.381vi, 3.5rem);
+$fluid-1440-40-32: clamp(2rem, 1.4286rem + 1.1905vi, 2.5rem);
+$fluid-1440-40-16: clamp(1rem, -0.7143rem + 3.5714vi, 2.5rem);
+$fluid-1440-32-24: clamp(1.5rem, 0.9286rem + 1.1905vi, 2rem);
+$fluid-1440-20-8: clamp(0.5rem, -0.3571rem + 1.7857vi, 1.25rem);
+
+// 768px - 375px (sm-xxs)
+$fluid-768-80-24: clamp(1.5rem, -1.8397rem + 14.2494vi, 5rem);
+$fluid-768-72-32: clamp(2rem, -0.3855rem + 10.1781vi, 4.5rem);
+$fluid-768-64-48: clamp(3rem, 2.0458rem + 4.0712vi, 4rem);
+$fluid-768-64-40: clamp(2.5rem, 1.0687rem + 6.1069vi, 4rem);
+$fluid-768-56-40: clamp(2.5rem, 1.5458rem + 4.0712vi, 3.5rem);
+$fluid-768-56-32: clamp(2rem, 0.5687rem + 6.1069vi, 3.5rem);
+$fluid-768-54-32: clamp(2rem, 0.688rem + 5.598vi, 3.375rem);
+$fluid-768-48-40: clamp(2.5rem, 2.0229rem + 2.0356vi, 3rem);
+$fluid-768-48-32: clamp(2rem, 1.0458rem + 4.0712vi, 3rem);
+$fluid-768-40-32: clamp(2rem, 1.5229rem + 2.0356vi, 2.5rem);
+$fluid-768-40-24: clamp(1.5rem, 0.5458rem + 4.0712vi, 2.5rem);
+$fluid-768-40-12: clamp(0.75rem, -0.9198rem + 7.1247vi, 2.5rem);
+$fluid-768-34-28: clamp(1.75rem, 1.3922rem + 1.5267vi, 2.125rem);
+$fluid-768-32-24: clamp(1.5rem, 1.0229rem + 2.0356vi, 2rem);
+$fluid-768-24-8: clamp(0.5rem, -0.4542rem + 4.0712vi, 1.5rem);
+$fluid-768-24-16: clamp(1rem, 0.5229rem + 2.0356vi, 1.5rem);
+$fluid-768-22-16: clamp(1rem, 0.6422rem + 1.5267vi, 1.375rem);
+$fluid-768-22-20: clamp(1.25rem, 1.1307rem + 0.5089vi, 1.375rem);
+$fluid-768-20-12: clamp(0.75rem, 0.2729rem + 2.0356vi, 1.25rem);
+$fluid-768-18-16: clamp(1rem, 0.8807rem + 0.5089vi, 1.125rem);
+$fluid-768-16-14: clamp(0.875rem, 0.7557rem + 0.5089vi, 1rem);
+$fluid-768-16-12: clamp(0.75rem, 0.5115rem + 1.0178vi, 1rem);
+$fluid-768-12-8: clamp(0.5rem, 0.2615rem + 1.0178vi, 0.75rem);
