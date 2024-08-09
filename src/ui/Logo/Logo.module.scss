@@ -1,0 +1,22 @@
+@import '@assets/styles/variables';
+@import '@assets/styles/mixins';
+
+.root {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    align-self: stretch;
+
+    span {
+        color: $text-inverse;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 2rem; /* 133.333% */
+        letter-spacing: -0.03rem;
+
+        &:last-child {
+            opacity: 0.6;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import '@assets/styles/variables';
+@import '@assets/styles/mixins';
+
+.root {
+    display: flex;
+    height: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.25rem;
+
+    span {
+        background: $icon-inverse;
+        height: 0.125rem;
+        flex-shrink: 0;
+    }
+    .long {
+        width: 2rem;
+    }
+    .short {
+        width: 1.5rem;
+    }
+}
