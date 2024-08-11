@@ -1,0 +1,29 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+
+.root {
+    @include global-padding;
+    padding-block: 5rem;
+
+    h2 {
+        color: $text-primary;
+        @include heading-l;
+    }
+
+    .casesList {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .caseCard {
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+    }
+
+    .buttonWrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
