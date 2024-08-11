@@ -1,6 +1,6 @@
 //Mixin for Variable Font Family
 
-@mixin onset() {
+@mixin onest() {
     font-family: $ff-heading;
     font-optical-sizing: auto;
     font-style: normal;
@@ -8,7 +8,7 @@
 }
 
 //Font-Family Variables
-$ff-heading: 'Onset', sans-serif;
+$ff-heading: "Onest", sans-serif;
 
 // Background Colors
 $bg-primary: #ffffff;

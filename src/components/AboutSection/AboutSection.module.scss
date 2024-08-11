@@ -1,6 +1,52 @@
-@import '@assets/styles/variables';
-@import '@assets/styles/mixins';
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
 
 .root {
-    display: flex;
+    @include global-padding;
+    padding-block: 5rem;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        span {
+            color: $text-primary;
+            @include caption;
+        }
+
+        h2 {
+            color: $text-primary;
+            @include heading-l;
+        }
+    }
+    .advantages {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-block: 3.5rem 2.5rem;
+
+        .advantageItem {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+
+            span:first-child {
+                color: $text-primary;
+                @include body-number;
+            }
+
+            span:last-child {
+                color: $text-primary;
+                background-color: $bg-secondary;
+                @include paragraph-l;
+                margin-top: -1.25rem;
+            }
+        }
+
+        .advantageItem:nth-child(2) {
+            align-items: flex-end;
+        }
+    }
 }

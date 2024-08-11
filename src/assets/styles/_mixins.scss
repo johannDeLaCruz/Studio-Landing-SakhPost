@@ -11,31 +11,31 @@
 // Mixins for Media Breakpoint
 
 @mixin media-breakpoint-down($size) {
-    @if $size == 'xxl' {
+    @if $size == "xxl" {
         @media screen and (max-width: $breakpoint-xxl) {
             @content;
         }
-    } @else if $size == 'xl' {
+    } @else if $size == "xl" {
         @media screen and (max-width: $breakpoint-xl) {
             @content;
         }
-    } @else if $size == 'lg' {
+    } @else if $size == "lg" {
         @media screen and (max-width: $breakpoint-lg) {
             @content;
         }
-    } @else if $size == 'md' {
+    } @else if $size == "md" {
         @media screen and (max-width: $breakpoint-md) {
             @content;
         }
-    } @else if $size == 'sm' {
+    } @else if $size == "sm" {
         @media screen and (max-width: $breakpoint-sm) {
             @content;
         }
-    } @else if $size == 'xs' {
+    } @else if $size == "xs" {
         @media screen and (max-width: $breakpoint-xs) {
             @content;
         }
-    } @else if $size == 'xxs' {
+    } @else if $size == "xxs" {
         @media screen and (max-width: $breakpoint-xxs) {
             @content;
         }
@@ -43,31 +43,31 @@
 }
 
 @mixin media-breakpoint-up($size) {
-    @if $size == 'xxl' {
+    @if $size == "xxl" {
         @media screen and (min-width: $breakpoint-xxl) {
             @content;
         }
-    } @else if $size == 'xl' {
+    } @else if $size == "xl" {
         @media screen and (min-width: $breakpoint-xl) {
             @content;
         }
-    } @else if $size == 'lg' {
+    } @else if $size == "lg" {
         @media screen and (min-width: $breakpoint-lg) {
             @content;
         }
-    } @else if $size == 'md' {
+    } @else if $size == "md" {
         @media screen and (min-width: $breakpoint-md) {
             @content;
         }
-    } @else if $size == 'sm' {
+    } @else if $size == "sm" {
         @media screen and (min-width: $breakpoint-sm) {
             @content;
         }
-    } @else if $size == 'xs' {
+    } @else if $size == "xs" {
         @media screen and (min-width: $breakpoint-xs) {
             @content;
         }
-    } @else if $size == 'xxs' {
+    } @else if $size == "xxs" {
         @media screen and (min-width: $breakpoint-xxs) {
             @content;
         }
@@ -86,17 +86,17 @@
     letter-spacing: -0.12rem;
     text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 5rem; // 80px
         letter-spacing: -0.2em;
     }
 
-    @include media-breakpoint-up('lg') {
+    @include media-breakpoint-up("lg") {
         font-size: 7.5rem; // 120px
         letter-spacing: -0.26em;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
         font-size: 7.5rem; // 120px
         letter-spacing: -0.3em;
     }
@@ -105,18 +105,22 @@
 @mixin heading-l {
     font-size: 2.5rem; // 40px
     letter-spacing: -0.1em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 2.5rem */
+    text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 4rem; // 64px
         letter-spacing: -0.16em;
     }
 
-    @include media-breakpoint-up('lg') {
+    @include media-breakpoint-up("lg") {
         font-size: 4.5rem; // 72px
         letter-spacing: -0.18em;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
         font-size: 6rem; // 96px
         letter-spacing: -0.24em;
     }
@@ -127,17 +131,17 @@
     font-weight: 110%;
     letter-spacing: -0.1em;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 3rem; // 48px
         letter-spacing: -0.12em;
     }
 
-    @include media-breakpoint-up('lg') {
+    @include media-breakpoint-up("lg") {
         font-size: 3.5rem; // 56px
         letter-spacing: -0.14em;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
         font-size: 4.5rem; // 72px
         letter-spacing: -0.18em;
     }
@@ -148,12 +152,12 @@
     font-weight: 100%;
     letter-spacing: -0.03em;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 2rem; // 32px
         letter-spacing: -0.04em;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
         font-size: 2.5rem; // 40px
         letter-spacing: -0.05em;
     }
@@ -164,12 +168,12 @@
     font-weight: 100%;
     letter-spacing: -0.0225em;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.5rem; // 24px
         letter-spacing: -0.04em;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
         font-size: 2rem; // 32px
         letter-spacing: -0.04em;
     }
@@ -178,15 +182,18 @@
 // Body Mixins
 @mixin body-number {
     font-size: 6rem; // 96px
-    font-weight: 100%;
     letter-spacing: -0.24em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 7.5rem */
+    text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 7.5rem; // 120px
         letter-spacing: -0.3em;
     }
 
-    @include media-breakpoint-up('xl') {
+    @include media-breakpoint-up("xl") {
         font-size: 9rem; // 144px
         letter-spacing: -0.36em;
     }
@@ -196,8 +203,11 @@
     font-size: 1rem; // 16px
     line-height: 1.25rem; // 20px
     letter-spacing: -0.02em;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.25rem; // 20px
         line-height: 1.5rem; // 24px
         letter-spacing: -0.0225em;
@@ -208,8 +218,11 @@
     font-size: 1.125rem; // 18px
     line-height: 1.5rem; // 24px
     letter-spacing: -0.0225em;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.25rem; // 20px
         line-height: 1.5rem; // 24px
         letter-spacing: -0.0225em;
@@ -220,8 +233,11 @@
     font-size: 1rem; // 16px
     line-height: 1.25rem; // 20px
     letter-spacing: -0.02em;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.125rem; // 18px
         line-height: 1.5rem; // 24px
         letter-spacing: -0.0225em;
@@ -233,7 +249,7 @@
     line-height: 1.25rem; // 20px
     letter-spacing: -0.0175em;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1rem; // 16px
         line-height: 1.5rem; // 24px
         letter-spacing: -0.02em;
@@ -252,7 +268,7 @@
     font-weight: 100%;
     letter-spacing: -0.04em;
 
-    @include media-breakpoint-up('lg') {
+    @include media-breakpoint-up("lg") {
         font-size: 2.5rem; // 40px
         letter-spacing: -0.05em;
     }
@@ -263,7 +279,7 @@
     line-height: 1.5rem; // 24px
     letter-spacing: -0.0225em;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.25rem; // 20px
         letter-spacing: -0.025em;
     }
@@ -278,7 +294,7 @@
     font-weight: 500;
     text-transform: lowercase;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.25rem; // 20px
         line-height: 1.5rem; // 24px
         letter-spacing: -0.025em;
@@ -290,7 +306,7 @@
     line-height: 1.25rem; // 20px
     letter-spacing: -0.025em;
 
-    @include media-breakpoint-up('sm') {
+    @include media-breakpoint-up("sm") {
         font-size: 1.5rem; // 24px
         line-height: 1.5rem; // 24px
         letter-spacing: -0.03em;

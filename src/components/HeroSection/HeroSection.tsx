@@ -41,6 +41,12 @@ export const HeroSection: React.FC = () => {
                 <h1 className={styles.title}>Разработка сайтов, дизайн, брендинг, продвижение</h1>
                 <CircleButton type='transparent'>начать проект</CircleButton>
             </div>
+            <span>Работаем c 2018</span>
+            <div className={styles.social}>
+                <a href='#'>dprofile</a>
+                <a href='#'>behance</a>
+                <a href='#'>instagram</a>
+            </div>
         </section>
     )
 }
