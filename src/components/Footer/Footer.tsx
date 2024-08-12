@@ -1,6 +1,5 @@
 import styles from './Footer.module.scss'
-import Digital from '@assets/icons/digital.svg'
-import Makers from '@assets/icons/makers.svg'
+import MakersDigital from '@assets/icons/Logo.svg'
 
 export const Footer: React.FC = () => {
     return (
@@ -65,8 +64,7 @@ export const Footer: React.FC = () => {
                 </div>
             </div>
             <div className={styles.logo}>
-                <img src={Makers} alt='makers' />
-                <img src={Digital} alt='digital' />
+                <img src={MakersDigital} alt='logo' />
             </div>
         </footer>
     )
