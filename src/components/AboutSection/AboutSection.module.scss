@@ -12,12 +12,10 @@
         gap: 0.5rem;
 
         span {
-            color: $text-primary;
             @include caption;
         }
 
         h2 {
-            color: $text-primary;
             @include heading-l;
         }
     }
@@ -34,12 +32,10 @@
             align-self: stretch;
 
             span:first-child {
-                color: $text-primary;
                 @include body-number;
             }
 
             span:last-child {
-                color: $text-primary;
                 background-color: $bg-secondary;
                 @include paragraph-l;
                 margin-top: -1.25rem;
