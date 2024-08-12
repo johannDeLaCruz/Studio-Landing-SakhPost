@@ -45,14 +45,14 @@
                 align-self: stretch;
 
                 h3 {
-                    @include heading-s;
                     text-align: center;
+                    @include heading-s;
                 }
 
                 p {
-                    @include paragraph-m;
                     text-align: center;
                     color: $text-secondary;
+                    @include paragraph-m;
                 }
             }
         }
