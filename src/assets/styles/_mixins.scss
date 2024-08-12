@@ -272,10 +272,13 @@
     letter-spacing: -0.0225em;
 }
 
-@mixin footer-large {
+@mixin link-large {
     font-size: 2rem; // 32px
-    font-weight: 100%;
     letter-spacing: -0.04em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 2rem */
+    text-transform: lowercase;
 
     @include media-breakpoint-up("lg") {
         font-size: 2.5rem; // 40px
@@ -283,10 +286,13 @@
     }
 }
 
-@mixin footer-small {
+@mixin link-small {
     font-size: 1.125rem; // 18px
     line-height: 1.5rem; // 24px
     letter-spacing: -0.0225em;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: lowercase;
 
     @include media-breakpoint-up("sm") {
         font-size: 1.25rem; // 20px

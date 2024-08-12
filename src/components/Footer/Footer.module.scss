@@ -1,6 +1,144 @@
-@import '@assets/styles/variables';
-@import '@assets/styles/mixins';
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
 
 .root {
+    padding-top: 4rem;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    @include global-padding;
+
+    .body {
+        display: flex;
+        padding-bottom: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        align-self: stretch;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+            align-self: stretch;
+
+            li {
+                align-self: stretch;
+                text-decoration: none;
+                list-style-type: none;
+
+                a {
+                    color: $text-primary;
+                    text-decoration: none;
+                    @include link-large;
+                }
+            }
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            align-self: stretch;
+
+            .social {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                align-self: stretch;
+
+                h2 {
+                    color: $text-secondary;
+                    @include caption;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.5rem;
+                    align-self: stretch;
+
+                    li {
+                        align-self: stretch;
+                        text-decoration: none;
+                        list-style-type: none;
+
+                        a {
+                            color: $text-primary;
+                            text-decoration: none;
+                            @include link-small;
+                        }
+                    }
+                }
+            }
+
+            .contactsInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                align-self: stretch;
+
+                h2 {
+                    color: $text-secondary;
+                    @include caption;
+                }
+
+                p > a {
+                    color: $text-primary;
+                    text-decoration: none;
+                    cursor: pointer;
+                    @include link-small;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        align-self: stretch;
+
+        a {
+            color: $text-secondary;
+            text-decoration: none;
+            cursor: pointer;
+            @include paragraph-m;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            align-self: stretch;
+
+            p {
+                color: $text-secondary;
+                flex: 1 0 0;
+                @include paragraph-m;
+            }
+
+            a {
+                color: $text-secondary;
+                text-decoration: none;
+                text-align: right;
+                cursor: pointer;
+                flex: 1 0 0;
+                @include paragraph-m;
+            }
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

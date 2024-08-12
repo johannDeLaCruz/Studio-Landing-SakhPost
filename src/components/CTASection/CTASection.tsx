@@ -19,10 +19,8 @@ export const CTASection: React.FC = () => {
             <form aria-labelledby='contact-form-title'>
                 <label htmlFor='name'>как вас зовут?</label>
                 <input type='text' id='name' name='name' placeholder='как вас зовут?' />
-
                 <label htmlFor='phone'>телефон</label>
                 <input type='tel' id='phone' name='phone' placeholder='телефон' />
-
                 <label htmlFor='task'>кратко опишите задачу</label>
                 <textarea
                     id='task'
@@ -30,7 +28,6 @@ export const CTASection: React.FC = () => {
                     placeholder='кратко опишите задачу'
                     rows={6}
                 ></textarea>
-
                 <div className={styles.formAction}>
                     <CircleButton type='white'>написать нам</CircleButton>
                     <p>

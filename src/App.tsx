@@ -5,7 +5,7 @@ import { CasesSection } from '@components/CasesSection'
 import { ExpertiseSection } from '@components/ExpertiseSection'
 import { ProcessesSection } from '@components/ProcessesSection'
 import { CTASection } from '@components/CTASection'
-// import { Footer } from '@components/Footer'
+import { Footer } from '@components/Footer'
 import '@assets/styles/main.scss'
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
             <ExpertiseSection />
             <ProcessesSection />
             <CTASection />
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
