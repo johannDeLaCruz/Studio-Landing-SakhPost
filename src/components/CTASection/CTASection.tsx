@@ -24,7 +24,12 @@ export const CTASection: React.FC = () => {
                 <input type='tel' id='phone' name='phone' placeholder='телефон' />
 
                 <label htmlFor='task'>кратко опишите задачу</label>
-                <textarea id='task' name='task' placeholder='кратко опишите задачу'></textarea>
+                <textarea
+                    id='task'
+                    name='task'
+                    placeholder='кратко опишите задачу'
+                    rows={6}
+                ></textarea>
 
                 <div className={styles.formAction}>
                     <CircleButton type='white'>написать нам</CircleButton>
