@@ -5,13 +5,13 @@ import { expertiseCards } from './constants'
 export const ExpertiseSection: React.FC = () => {
     return (
         <section className={styles.root} id='expertise'>
-            <div className={styles.header}>
+            <header>
                 <span>Экспертиза</span>
                 <h2>
                     Исследуем ваш бизнес, создадим успешный продукт, обновим фирменный стиль или
                     разработаем брендинг с нуля
                 </h2>
-            </div>
+            </header>
             <div className={styles.expertiseGrid}>
                 {expertiseCards.map((card, index) => (
                     <div className={styles.expertiseCard} key={index}>

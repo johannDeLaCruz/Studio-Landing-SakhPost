@@ -254,6 +254,9 @@
     font-size: 0.875rem; // 14px
     line-height: 1.25rem; // 20px
     letter-spacing: -0.0175em;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: lowercase;
 
     @include media-breakpoint-up("sm") {
         font-size: 1rem; // 16px
@@ -311,6 +314,9 @@
     font-size: 1.25rem; // 20px
     line-height: 1.25rem; // 20px
     letter-spacing: -0.025em;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: lowercase;
 
     @include media-breakpoint-up("sm") {
         font-size: 1.5rem; // 24px

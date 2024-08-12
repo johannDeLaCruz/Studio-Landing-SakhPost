@@ -1,0 +1,124 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+
+.root {
+    @include global-padding;
+    padding-block: 4rem;
+    background-color: $bg-inverse;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.5rem;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        align-self: stretch;
+
+        h2 {
+            @include heading-l;
+            color: $text-inverse;
+            text-align: center;
+            align-self: stretch;
+        }
+
+        .manager {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+
+            .imageWrapper {
+                width: var(--space-1000, 5rem);
+                height: var(--space-1000, 5rem);
+                border-radius: 1.5rem;
+                background: url(<path-to-image>) lightgray -22.001px -8.379px / 155.003% 187.474% no-repeat;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                p {
+                    @include paragraph-m;
+                    color: $text-inverse;
+                    align-self: stretch;
+                }
+
+                a {
+                    @include paragraph-m;
+                    color: $text-inverse-secondary;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        align-self: stretch;
+
+        label {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        input {
+            display: flex;
+            padding: 1.25rem 0rem;
+            align-items: center;
+            align-self: stretch;
+            border-bottom: 2px solid $border-inverse-alpha;
+            outline: none;
+            appearance: none;
+            background: none;
+            border: none;
+        }
+
+        textarea {
+            display: flex;
+            padding: 1.25rem 0rem;
+            align-items: flex-start;
+            align-self: stretch;
+            outline: none;
+            appearance: none;
+            background: none;
+            border: none;
+        }
+
+        .formAction {
+            display: flex;
+            padding-top: 1rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            align-self: stretch;
+
+            p {
+                @include paragraph-m;
+                color: $text-inverse-secondary;
+                text-align: center;
+                max-width: 20rem;
+                align-self: stretch;
+
+                a {
+                    color: $text-inverse-secondary;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

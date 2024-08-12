@@ -4,10 +4,10 @@ import { processesCards } from './constants'
 export const ProcessesSection: React.FC = () => {
     return (
         <section className={styles.root} id='processes'>
-            <div className={styles.header}>
+            <header>
                 <span>Процессы</span>
                 <h2>результат — часть работы, но не менее важны коммуникация и процессы</h2>
-            </div>
+            </header>
             <div className={styles.processesGrid}>
                 {processesCards.map((card, index) => (
                     <div key={index} className={styles.processCard}>

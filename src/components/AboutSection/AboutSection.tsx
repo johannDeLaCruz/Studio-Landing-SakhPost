@@ -19,10 +19,10 @@ export const AboutSection: React.FC = () => {
     }
     return (
         <section className={styles.root} id='about'>
-            <div className={styles.header}>
+            <header>
                 <span>О нас</span>
                 <h2>создаем топовые решения, которые радуют и превосходят ваши ожидания</h2>
-            </div>
+            </header>
             <div className={styles.advantages}>
                 <div className={styles.advantageItem}>
                     <span>120+</span>
