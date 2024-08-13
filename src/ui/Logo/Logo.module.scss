@@ -1,5 +1,5 @@
-@import '@assets/styles/variables';
-@import '@assets/styles/mixins';
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
 
 .root {
     display: flex;
@@ -9,11 +9,11 @@
 
     span {
         color: $text-inverse;
-        font-size: 1.5rem;
+        font-size: $fluid-768-28-24;
         font-style: normal;
         font-weight: 500;
         line-height: 2rem; /* 133.333% */
-        letter-spacing: -0.03rem;
+        letter-spacing: clamp(-0.035rem, -0.0252rem + -0.0204vw, -0.03rem);
 
         &:last-child {
             opacity: 0.6;

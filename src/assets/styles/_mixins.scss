@@ -78,8 +78,7 @@
 
 // Heading Mixins
 @mixin heading-xl {
-    font-family: $ff-heading;
-    font-size: 3rem; // 48px
+    font-size: $fluid-768-80-48; // 48px
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 3rem */
@@ -87,20 +86,12 @@
     text-transform: lowercase;
 
     @include media-breakpoint-up("sm") {
-        font-size: 5rem; // 80px
-    }
-
-    @include media-breakpoint-up("lg") {
-        font-size: 7.5rem; // 120px
-    }
-
-    @include media-breakpoint-up("xl") {
-        font-size: 7.5rem; // 120px
+        font-size: $fluid-1440-120-80; // 80px
     }
 }
 
 @mixin heading-l {
-    font-size: 2.5rem; // 40px
+    font-size: $fluid-768-64-40; // 40px
     letter-spacing: -0.04em;
     font-style: normal;
     font-weight: 500;
@@ -108,20 +99,16 @@
     text-transform: lowercase;
 
     @include media-breakpoint-up("sm") {
-        font-size: 4rem; // 64px
+        font-size: $fluid-1440-72-64; // 64px
     }
 
     @include media-breakpoint-up("lg") {
-        font-size: 4.5rem; // 72px
-    }
-
-    @include media-breakpoint-up("xl") {
-        font-size: 6rem; // 96px
+        font-size: $fluid-1920-96-72; // 72px
     }
 }
 
 @mixin heading-m {
-    font-size: 2.5rem; // 40px
+    font-size: $fluid-768-48-40; // 40px
     letter-spacing: -0.04em;
     font-style: normal;
     font-weight: 500;
@@ -129,20 +116,16 @@
     line-height: 110%; /* 2.75rem */
 
     @include media-breakpoint-up("sm") {
-        font-size: 3rem; // 48px
+        font-size: $fluid-1440-56-48; // 48px
     }
 
     @include media-breakpoint-up("lg") {
-        font-size: 3.5rem; // 56px
-    }
-
-    @include media-breakpoint-up("xl") {
-        font-size: 4.5rem; // 72px
+        font-size: $fluid-1920-72-56; // 56px
     }
 }
 
 @mixin heading-s {
-    font-size: 1.5rem; // 24px
+    font-size: $fluid-768-32-24; // 24px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
@@ -154,12 +137,12 @@
     }
 
     @include media-breakpoint-up("xl") {
-        font-size: 2.5rem; // 40px
+        font-size: $fluid-1920-40-32; // 40px
     }
 }
 
 @mixin heading-xs {
-    font-size: 1.125rem; // 18px
+    font-size: $fluid-768-24-18; // 18px
     font-weight: 100%;
     letter-spacing: -0.02em;
 
@@ -168,13 +151,13 @@
     }
 
     @include media-breakpoint-up("xl") {
-        font-size: 2rem; // 32px
+        font-size: $fluid-1920-32-24; // 32px
     }
 }
 
 // Body Mixins
 @mixin body-number {
-    font-size: 6rem; // 96px
+    font-size: $fluid-768-120-96; // 96px
     letter-spacing: -0.04em;
     font-style: normal;
     font-weight: 500;
@@ -186,64 +169,44 @@
     }
 
     @include media-breakpoint-up("xl") {
-        font-size: 9rem; // 144px
+        font-size: $fluid-1920-144-120; // 144px
     }
 }
 
 @mixin caption {
-    font-size: 1rem; // 16px
-    line-height: 1.25rem; // 20px
+    font-size: $fluid-768-20-16; // 16px
+    line-height: $fluid-768-24-20; // 20px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1.25rem; // 20px
-        line-height: 1.5rem; // 24px
-    }
 }
 
 @mixin paragraph-l {
-    font-size: 1.125rem; // 18px
+    font-size: $fluid-768-20-18; // 18px
     line-height: 1.5rem; // 24px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1.25rem; // 20px
-        line-height: 1.5rem; // 24px
-    }
 }
 
 @mixin paragraph-m {
-    font-size: 1rem; // 16px
-    line-height: 1.25rem; // 20px
+    font-size: $fluid-768-18-16; // 16px
+    line-height: $fluid-768-24-20; // 20px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1.125rem; // 18px
-        line-height: 1.5rem; // 24px
-    }
 }
 
 @mixin paragraph-s {
-    font-size: 0.875rem; // 14px
-    line-height: 1.25rem; // 20px
+    font-size: $fluid-768-16-14; // 14px
+    line-height: $fluid-768-24-20; // 20px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1rem; // 16px
-        line-height: 1.5rem; // 24px
-    }
 }
 
 // Navigation Mixins
@@ -254,56 +217,41 @@
 }
 
 @mixin link-large {
-    font-size: 2rem; // 32px
+    font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem); // 32px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 2rem */
     text-transform: lowercase;
 
-    @include media-breakpoint-up("lg") {
-        font-size: 2.5rem; // 40px
-    }
+    // @include media-breakpoint-up("lg") {
+    //     font-size: 2.5rem; // 40px
+    // }
 }
 
 @mixin link-small {
-    font-size: 1.125rem; // 18px
+    font-size: $fluid-768-20-18; // 18px
     line-height: 1.5rem; // 24px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1.25rem; // 20px
-    }
 }
 
 // Form Mixins
 @mixin button-label {
-    font-family: $ff-heading;
-    font-size: 1.125rem; // 18px
-    line-height: 1.25rem; // 20px
+    font-size: $fluid-768-20-18; // 18px
+    line-height: $fluid-768-24-20; // 20px
     letter-spacing: -0.02em;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1.25rem; // 20px
-        line-height: 1.5rem; // 24px
-    }
 }
 
 @mixin input-field {
-    font-size: 1.25rem; // 20px
-    line-height: 1.25rem; // 20px
+    font-size: $fluid-768-24-20; // 20px
+    line-height: $fluid-768-24-20; // 20px
     letter-spacing: -0.02em;
     font-style: normal;
     font-weight: 500;
     text-transform: lowercase;
-
-    @include media-breakpoint-up("sm") {
-        font-size: 1.5rem; // 24px
-        line-height: 1.5rem; // 24px
-    }
 }
