@@ -3,7 +3,11 @@
 
 .root {
     @include global-padding;
-    padding-block: 5rem;
+    padding-block: $fluid-768-120-80;
+
+    @include media-breakpoint-up("md") {
+        padding-block: clamp(7.5rem, -4.8077rem + 19.2308vw, 12.5rem);
+    }
 
     h2 {
         color: $text-primary;
