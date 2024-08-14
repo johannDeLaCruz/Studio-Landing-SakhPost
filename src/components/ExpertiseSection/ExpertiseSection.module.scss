@@ -4,7 +4,11 @@
 .root {
     @include global-padding;
     background-color: $bg-primary;
-    padding-block: 4rem;
+    padding-block: $fluid-768-96-64;
+
+    @include media-breakpoint-up("md") {
+        padding-block: clamp(6rem, -3.8462rem + 15.3846vw, 10rem);
+    }
 
     header {
         display: flex;
