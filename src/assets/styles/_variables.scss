@@ -102,6 +102,7 @@ $fluid-1440-20-8: clamp(0.5rem, -0.3571rem + 1.7857vi, 1.25rem);
 // 1024px - 768px (md-sm)
 $fluid-1024-112-80: clamp(5rem, 13rem + -12.5vw, 7rem);
 $fluid-1024-80-48: clamp(3rem, 11rem + -12.5vw, 5rem);
+$fluid-1024-40-24: clamp(1.5rem, -0.9615rem + 3.8462vw, 2.5rem);
 
 // 768px - 375px (sm-xxs)
 $fluid-768-180-160: clamp(10rem, 8.8073rem + 5.0891vw, 11.25rem);
@@ -110,6 +111,7 @@ $fluid-768-120-80: clamp(5rem, 2.6145rem + 10.1781vw, 7.5rem);
 $fluid-768-112-48: clamp(3rem, -0.8168rem + 16.285vw, 7rem);
 $fluid-768-80-48: clamp(3rem, 1.0916rem + 8.1425vw, 5rem);
 $fluid-768-80-24: clamp(1.5rem, -1.8397rem + 14.2494vi, 5rem);
+$fluid-768-72-56: clamp(3.5rem, 2.5458rem + 4.0712vw, 4.5rem);
 $fluid-768-72-32: clamp(2rem, -0.3855rem + 10.1781vi, 4.5rem);
 $fluid-768-64-48: clamp(3rem, 2.0458rem + 4.0712vi, 4rem);
 $fluid-768-64-40: clamp(2.5rem, 1.0687rem + 6.1069vi, 4rem);

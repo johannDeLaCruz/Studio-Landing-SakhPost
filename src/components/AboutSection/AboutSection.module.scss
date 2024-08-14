@@ -14,26 +14,71 @@
         flex-direction: column;
         justify-content: start;
         gap: 0.5rem;
+        position: relative;
 
         span {
             @include caption;
+
+            @include media-breakpoint-up("md") {
+                position: absolute;
+                top: clamp(0rem, -2.3077rem + 7.6923vw, 1.5rem);
+            }
         }
 
         h2 {
+            text-indent: clamp(0rem, -62.25rem + 129.6875vw, 20.75rem);
             @include heading-l;
+
+            @include media-breakpoint-up("md") {
+                text-indent: clamp(20.75rem, 8.1346rem + 19.7115vw, 25.875rem);
+                margin-left: clamp(0rem, -42.4615rem + 66.3462vw, 17.25rem);
+            }
+
+            @include media-breakpoint-up("lg") {
+                text-indent: clamp(25.875rem, 1.125rem + 27.5vw, 34.125rem);
+                width: clamp(67.75rem, 1.75rem + 73.3333vw, 89.75rem);
+                margin-left: clamp(17.25rem, 0.75rem + 18.3333vw, 22.75rem);
+            }
         }
     }
     .advantages {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-block: 3.5rem 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-items: start;
+        padding-block: $fluid-768-72-56 $fluid-768-56-40;
+        row-gap: clamp(0rem, -2.8626rem + 12.2137vw, 3rem);
+
+        @include media-breakpoint-up("sm") {
+            grid-template-columns: repeat(2, 1fr);
+            margin-left: clamp(0rem, -62.25rem + 129.6875vw, 20.75rem);
+        }
+
+        @include media-breakpoint-up("md") {
+            margin-left: clamp(0rem, -42.4615rem + 66.3462vw, 17.25rem);
+            padding-block: clamp(4.5rem, -2.8846rem + 11.5385vw, 7.5rem) clamp(3.5rem, -2.6538rem + 9.6154vw, 6rem);
+        }
+
+        @include media-breakpoint-up("lg") {
+            grid-template-columns: repeat(3, 1fr);
+            margin-left: clamp(17.25rem, 0.75rem + 18.3333vw, 22.75rem);
+        }
 
         .advantageItem {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             align-self: stretch;
+
+            &:first-child {
+                @include media-breakpoint-up("sm") {
+                    grid-column: 1 / span 2;
+                }
+
+                @include media-breakpoint-up("lg") {
+                    grid-column: 1 / span 1;
+                }
+            }
 
             span:first-child {
                 @include body-number;
@@ -42,12 +87,16 @@
             span:last-child {
                 background-color: $bg-secondary;
                 @include paragraph-l;
-                margin-top: -1.25rem;
+                margin-top: clamp(-1.75rem, -0.7729rem + -2.0356vw, -1.25rem);
             }
         }
 
         .advantageItem:nth-child(2) {
             align-items: flex-end;
+
+            @include media-breakpoint-up("sm") {
+                align-items: flex-start;
+            }
         }
     }
 }

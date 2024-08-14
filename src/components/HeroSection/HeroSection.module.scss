@@ -26,6 +26,7 @@
 
         @include media-breakpoint-up("lg") {
             padding-top: $fluid-1920-112-80;
+            padding-inline: clamp(0rem, -34.125rem + 37.9167vw, 11.375rem);
             gap: $fluid-1920-80-48;
         }
 
@@ -54,9 +55,9 @@
         bottom: $fluid-768-24-16;
         right: $fluid-768-24-16;
 
-        @include media-breakpoint-up("sm") {
-            bottom: $fluid-1440-40-24;
-            right: $fluid-1440-40-24;
+        @include media-breakpoint-up("md") {
+            bottom: $fluid-1024-40-24;
+            right: $fluid-1024-40-24;
         }
 
         @include media-breakpoint-up("lg") {
@@ -80,9 +81,9 @@
 
         // add position for breakpoints up to "md"
 
-        @include media-breakpoint-up("sm") {
-            bottom: $fluid-1440-40-24;
-            left: $fluid-1440-40-24;
+        @include media-breakpoint-up("md") {
+            bottom: $fluid-1024-40-24;
+            left: $fluid-1024-40-24;
         }
 
         @include media-breakpoint-up("lg") {

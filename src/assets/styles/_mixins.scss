@@ -7,8 +7,8 @@
 @mixin global-padding {
     padding-inline: $fluid-768-24-16;
 
-    @include media-breakpoint-up("sm") {
-        padding-inline: $fluid-1440-40-24;
+    @include media-breakpoint-up("md") {
+        padding-inline: $fluid-1024-40-24;
     }
 
     @include media-breakpoint-up("lg") {
