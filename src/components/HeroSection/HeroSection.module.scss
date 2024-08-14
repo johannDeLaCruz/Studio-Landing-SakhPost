@@ -6,12 +6,15 @@
     overflow: hidden;
     background-color: $bg-blackout;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @include global-padding;
 
     .content {
         display: flex;
         padding-top: $fluid-768-112-48;
-        margin-top: clamp(11.375rem, 9.9437rem + 6.1069vw, 12.875rem);
         flex-direction: column;
         align-items: center;
         gap: $fluid-768-80-48;
@@ -19,19 +22,26 @@
         @include media-breakpoint-up("sm") {
             padding-top: $fluid-1024-112-80;
             gap: $fluid-1024-80-48;
-            margin-top: clamp(6.875rem, 30.875rem + -37.5vw, 12.875rem);
         }
 
         @include media-breakpoint-up("lg") {
             padding-top: $fluid-1920-112-80;
             gap: $fluid-1920-80-48;
-            margin-top: clamp(5.625rem, 1.125rem + 5vw, 7.125rem);
         }
 
-        .title {
+        h1 {
             color: $text-inverse;
             text-align: center;
             @include heading-xl;
+
+            @include media-breakpoint-up("md") {
+                text-indent: clamp(20.75rem, 8.1346rem + 19.7115vw, 25.875rem);
+                text-align: start;
+            }
+
+            @include media-breakpoint-up("lg") {
+                text-indent: clamp(22.75rem, 35.25rem + -10.4167vw, 25.875rem);
+            }
         }
     }
 
@@ -67,6 +77,8 @@
         bottom: $fluid-768-24-16;
         left: $fluid-768-24-16;
         @include caption;
+
+        // add position for breakpoints up to "md"
 
         @include media-breakpoint-up("sm") {
             bottom: $fluid-1440-40-24;

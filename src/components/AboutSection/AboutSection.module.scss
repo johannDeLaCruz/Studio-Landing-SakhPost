@@ -3,7 +3,11 @@
 
 .root {
     @include global-padding;
-    padding-top: 5rem;
+    padding-top: $fluid-768-120-80;
+
+    @include media-breakpoint-up("md") {
+        padding-top: clamp(7.5rem, -4.8077rem + 19.2308vw, 12.5rem);
+    }
 
     header {
         display: flex;

@@ -23,7 +23,7 @@
 .transparent {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: $bg-primary-alpha;
-    backdrop-filter: blur(calc(24px / 2));
+    backdrop-filter: blur(12px);
     color: $text-inverse;
     text-align: center;
 }

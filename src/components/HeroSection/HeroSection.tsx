@@ -38,7 +38,7 @@ export const HeroSection: React.FC = () => {
                 fillMode={'height'}
             />
             <div className={styles.content}>
-                <h1 className={styles.title}>Разработка сайтов, дизайн, брендинг, продвижение</h1>
+                <h1>Разработка сайтов, дизайн, брендинг, продвижение</h1>
                 <CircleButton type='transparent'>начать проект</CircleButton>
             </div>
             <span>Работаем c 2018</span>

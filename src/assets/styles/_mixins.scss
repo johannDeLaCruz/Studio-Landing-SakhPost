@@ -96,6 +96,7 @@
     @include media-breakpoint-up("sm") {
         font-size: $fluid-1440-104-80; // 80px
     }
+    //add media-breakpoint-up("md") here
 
     @include media-breakpoint-up("lg") {
         font-size: $fluid-1920-120-104; // 112px
