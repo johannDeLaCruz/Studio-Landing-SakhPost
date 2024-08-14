@@ -4,10 +4,14 @@
 .root {
     display: flex;
     width: 100%;
-    padding: 1rem 0rem;
+    padding-block: $fluid-768-24-16;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     z-index: 10;
     @include global-padding;
+
+    @include media-breakpoint-up("sm") {
+        padding-block: $fluid-1440-32-24;
+    }
 }
