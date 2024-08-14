@@ -7,6 +7,14 @@
     gap: 0.125rem;
     align-self: stretch;
 
+    @include media-breakpoint-up("md") {
+        width: clamp(19.5rem, 6.8846rem + 19.7115vw, 24.625rem);
+    }
+
+    @include media-breakpoint-up("lg") {
+        width: clamp(24.625rem, -0.125rem + 27.5vw, 32.875rem);
+    }
+
     span {
         color: $text-inverse;
         font-size: $fluid-768-28-24;

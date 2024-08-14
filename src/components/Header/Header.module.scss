@@ -9,9 +9,53 @@
     align-items: center;
     position: absolute;
     z-index: 10;
+    gap: 1.25rem;
     @include global-padding;
 
     @include media-breakpoint-up("sm") {
         padding-block: $fluid-1440-32-24;
+    }
+
+    @include media-breakpoint-up("md") {
+        justify-content: flex-start;
+    }
+
+    nav {
+        display: flex;
+
+        div {
+            &:first-child {
+                display: flex;
+                width: clamp(16rem, 28.1154rem + -13.4615vw, 19.5rem);
+                align-items: center;
+                gap: 2rem;
+                flex-shrink: 0;
+
+                @include media-breakpoint-up("lg") {
+                    width: clamp(16rem, -0.5rem + 18.3333vw, 21.5rem);
+                    gap: $fluid-1920-40-32;
+                }
+            }
+
+            &:last-child {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex: 1 0 0;
+                width: clamp(16rem, 28.1154rem + -13.4615vw, 19.5rem);
+
+                @include media-breakpoint-up("lg") {
+                    width: clamp(16rem, -0.5rem + 18.3333vw, 21.5rem);
+                    gap: $fluid-1920-40-32;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $text-inverse;
+                cursor: pointer;
+                @include navigation-header;
+            }
+        }
     }
 }
