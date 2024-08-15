@@ -2,13 +2,25 @@
 @import "@assets/styles/mixins";
 
 .root {
-    @include global-padding;
-    padding-block: 4rem;
+    padding-block: $fluid-768-80-64;
+    padding-inline: $fluid-768-24-16;
     background-color: $bg-inverse;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 3.5rem;
+
+    @include media-breakpoint-up("md") {
+        padding-inline: clamp(1.5rem, -13.2692rem + 23.0769vw, 7.5rem);
+        flex-direction: row;
+    }
+
+    @include media-breakpoint-up("lg") {
+        padding-block: $fluid-1920-120-80;
+        padding-inline: clamp(7.5rem, 0rem + 8.3333vw, 10rem);
+        border-radius: 1.5rem;
+        margin-inline: $fluid-1920-60-40;
+    }
 
     header {
         display: flex;
@@ -18,10 +30,10 @@
         align-self: stretch;
 
         h2 {
-            @include heading-l;
             color: $text-inverse;
             text-align: center;
             align-self: stretch;
+            @include heading-l;
         }
 
         .manager {
@@ -43,16 +55,16 @@
                 gap: 0.5rem;
 
                 p {
-                    @include paragraph-m;
                     color: $text-inverse;
                     align-self: stretch;
+                    @include paragraph-m;
                 }
 
                 a {
-                    @include paragraph-m;
                     color: $text-inverse-secondary;
                     text-decoration: none;
                     cursor: pointer;
+                    @include paragraph-m;
                 }
             }
         }
@@ -123,11 +135,11 @@
             align-self: stretch;
 
             p {
-                @include paragraph-m;
                 color: $text-inverse-secondary;
                 text-align: center;
                 max-width: 20rem;
-                align-self: stretch;
+                // align-self: stretch;
+                @include paragraph-m;
 
                 a {
                     color: $text-inverse-secondary;
