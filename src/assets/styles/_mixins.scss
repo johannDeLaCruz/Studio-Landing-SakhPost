@@ -149,7 +149,7 @@
         font-size: 2rem; // 32px
     }
 
-    @include media-breakpoint-up("xl") {
+    @include media-breakpoint-up("lg") {
         font-size: $fluid-1920-40-32; // 40px
     }
 }
@@ -163,7 +163,7 @@
         font-size: 1.5rem; // 24px
     }
 
-    @include media-breakpoint-up("xl") {
+    @include media-breakpoint-up("lg") {
         font-size: $fluid-1920-32-24; // 32px
     }
 }
@@ -181,7 +181,7 @@
         font-size: 7.5rem; // 120px
     }
 
-    @include media-breakpoint-up("xl") {
+    @include media-breakpoint-up("lg") {
         font-size: $fluid-1920-144-120; // 144px
     }
 }

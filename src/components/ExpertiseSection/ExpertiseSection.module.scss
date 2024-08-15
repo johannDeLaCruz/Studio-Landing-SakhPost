@@ -13,8 +13,13 @@
     header {
         display: flex;
         flex-direction: column;
-        padding-bottom: 3.5rem;
+        padding-bottom: $fluid-768-72-56;
         gap: 0.5rem;
+
+        @include media-breakpoint-up("md") {
+            gap: $fluid-1440-32-8;
+            padding-bottom: $fluid-1440-120-72;
+        }
 
         span {
             @include caption;
@@ -26,21 +31,59 @@
     }
 
     .expertiseGrid {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-items: start;
+        row-gap: $fluid-768-72-40;
+
+        @include media-breakpoint-up("sm") {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            column-gap: 1.25rem;
+        }
+
+        @include media-breakpoint-up("md") {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: $fluid-1440-120-72;
+            width: clamp(61rem, 23.1538rem + 59.1346vw, 76.375rem);
+        }
+
+        @include media-breakpoint-up("lg") {
+            width: clamp(76.375rem, 2.125rem + 82.5vw, 101.125rem);
+        }
 
         .expertiseCard {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 1.5rem;
+            gap: $fluid-768-40-24;
             align-self: stretch;
 
+            &:nth-child(1) {
+                @include media-breakpoint-up("md") {
+                    grid-row: 1 / span 2;
+                }
+            }
+
+            &:nth-child(2) {
+                @include media-breakpoint-up("md") {
+                    grid-column: 2 / span 2;
+                }
+            }
+
+            @include media-breakpoint-up("md") {
+                gap: $fluid-1440-64-40;
+            }
+
             img {
-                width: 5rem;
-                height: 5rem;
+                width: $fluid-768-120-80;
+                height: $fluid-768-120-80;
+
+                @include media-breakpoint-up("md") {
+                    width: $fluid-1440-160-120;
+                    height: $fluid-1440-160-120;
+                }
             }
 
             .expertiseContent {
@@ -50,6 +93,10 @@
                 align-items: flex-start;
                 gap: 1rem;
                 align-self: stretch;
+
+                @include media-breakpoint-up("md") {
+                    gap: $fluid-1440-24-16;
+                }
 
                 h3 {
                     color: $text-primary;
