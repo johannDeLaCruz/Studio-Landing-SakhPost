@@ -88,14 +88,19 @@
 
             .expertiseContent {
                 display: flex;
-                max-width: 20rem;
+                max-width: clamp(20rem, 18.5687rem + 6.1069vw, 21.5rem);
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1rem;
                 align-self: stretch;
 
+                @include media-breakpoint-up("sm") {
+                    max-width: clamp(19.5rem, 27.5rem + -12.5vw, 21.5rem);
+                }
+
                 @include media-breakpoint-up("md") {
                     gap: $fluid-1440-24-16;
+                    max-width: clamp(19.5rem, 14.5769rem + 7.6923vw, 21.5rem);
                 }
 
                 h3 {
