@@ -2,37 +2,64 @@
 @import "@assets/styles/mixins";
 
 .root {
-    padding-top: 4rem;
+    padding-top: $fluid-768-96-64;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
     @include global-padding;
 
+    @include media-breakpoint-up("md") {
+        padding-top: clamp(6rem, -3.8462rem + 15.3846vw, 10rem);
+    }
+
     .body {
         display: flex;
-        padding-bottom: 1rem;
+        padding-bottom: $fluid-768-32-16;
         flex-direction: column;
         align-items: flex-start;
-        gap: 2rem;
+        gap: clamp(1.25rem, 2.7156rem + -3.0534vw, 2rem);
         align-self: stretch;
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.5rem;
-            align-self: stretch;
+        @include media-breakpoint-up("sm") {
+            flex-direction: row;
+        }
 
-            li {
-                align-self: stretch;
-                text-decoration: none;
-                list-style-type: none;
+        @include media-breakpoint-up("md") {
+            padding-bottom: $fluid-1440-48-32;
+        }
 
-                a {
-                    color: $text-primary;
+        nav {
+            width: 14.188rem;
+
+            @include media-breakpoint-up("sm") {
+                width: clamp(14.1875rem, -1.75rem + 33.2031vw, 19.5rem);
+            }
+
+            @include media-breakpoint-up("md") {
+                width: clamp(19.5rem, -35.5769rem + 86.0577vw, 41.875rem);
+            }
+
+            @include media-breakpoint-up("lg") {
+                width: clamp(41.875rem, 0.625rem + 45.8333vw, 55.625rem);
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+
+                li {
+                    align-self: stretch;
                     text-decoration: none;
-                    @include link-large;
+                    list-style-type: none;
+
+                    a {
+                        color: $text-primary;
+                        text-decoration: none;
+                        @include link-large;
+                    }
                 }
             }
         }
@@ -41,8 +68,13 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 1.5rem;
+            gap: clamp(1.25rem, 1.7385rem + -1.0178vw, 1.5rem);
             align-self: stretch;
+
+            @include media-breakpoint-up("sm") {
+                flex-direction: row;
+                flex: 1 0 0;
+            }
 
             .social {
                 display: flex;
@@ -60,7 +92,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    gap: 0.5rem;
+                    gap: $fluid-768-12-8;
                     align-self: stretch;
 
                     li {
@@ -96,6 +128,22 @@
                     @include link-small;
                 }
             }
+
+            .social,
+            .contactsInfo {
+                @include media-breakpoint-up("sm") {
+                    max-width: clamp(14.1875rem, -1.75rem + 33.2031vw, 19.5rem);
+                    flex: 1 0 0;
+                }
+
+                @include media-breakpoint-up("md") {
+                    max-width: clamp(19.5rem, 17.5rem + 3.125vw, 20.3125rem);
+                }
+
+                @include media-breakpoint-up("lg") {
+                    max-width: clamp(20.3125rem, -0.3125rem + 22.9167vw, 27.1875rem);
+                }
+            }
         }
     }
 
@@ -103,8 +151,21 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: $fluid-768-24-16;
         align-self: stretch;
+
+        @include media-breakpoint-up("sm") {
+            width: clamp(21.4375rem, 13.6846rem + 33.0789vw, 29.5625rem);
+            margin-left: auto;
+        }
+
+        @include media-breakpoint-up("md") {
+            margin-left: 0;
+            width: auto;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
 
         a {
             color: $text-secondary;
