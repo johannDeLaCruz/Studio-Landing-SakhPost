@@ -12,7 +12,7 @@ export const CTASection: React.FC = () => {
                         <img src={Avatar} alt='manager-photo' />
                     </div>
                     <div className={styles.content}>
-                        <p>Это Сергей — наш менеджер, Он с радостью ответит на все ваши вопросы</p>
+                        <p>Это Сергей — наш менеджер, Он c радостью ответит на все ваши вопросы</p>
                         <a href='#'>Написать в телеграм ↗</a>
                     </div>
                 </div>
