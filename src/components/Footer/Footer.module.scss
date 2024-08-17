@@ -180,6 +180,10 @@
             gap: 0.5rem;
             align-self: stretch;
 
+            @include media-breakpoint-up("md") {
+                gap: 1.25rem;
+            }
+
             p {
                 color: $text-secondary;
                 flex: 1 0 0;
@@ -193,6 +197,21 @@
                 cursor: pointer;
                 flex: 1 0 0;
                 @include paragraph-m;
+
+                @include media-breakpoint-up("md") {
+                    text-align: left;
+                }
+            }
+
+            p,
+            a {
+                @include media-breakpoint-up("md") {
+                    width: clamp(19.5rem, 17.5rem + 3.125vw, 20.3125rem);
+                }
+
+                @include media-breakpoint-up("lg") {
+                    width: clamp(20.3125rem, -0.3125rem + 22.9167vw, 27.1875rem);
+                }
             }
         }
     }
