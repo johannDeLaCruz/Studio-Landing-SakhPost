@@ -4,7 +4,7 @@ import { CircleButton } from '@ui/CircleButton'
 
 export const CTASection: React.FC = () => {
     return (
-        <section className={styles.root} id='cta'>
+        <section className={styles.root} id='contact'>
             <header>
                 <h2>Давайте обсудим ваш проект</h2>
                 <div className={styles.manager}>

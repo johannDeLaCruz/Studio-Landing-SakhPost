@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
                     </div>
                     <div>
                         <a href='#expertise'>Экспертиза</a>
-                        <a href='$processes'>Процессы</a>
+                        <a href='#processes'>Процессы</a>
                     </div>
                 </nav>
             )}
