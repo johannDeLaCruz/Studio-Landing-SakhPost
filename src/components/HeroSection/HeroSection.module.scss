@@ -30,18 +30,35 @@
             gap: $fluid-1920-80-48;
         }
 
-        h1 {
-            color: $text-inverse;
-            text-align: center;
-            @include heading-xl;
+        div {
+            position: relative;
 
-            @include media-breakpoint-up("md") {
-                text-indent: clamp(20.75rem, 8.1346rem + 19.7115vw, 25.875rem);
-                text-align: start;
+            span {
+                color: $text-inverse;
+                position: absolute;
+                top: $fluid-1440-24-20;
+                left: 0;
+                @include caption;
+
+                @include media-breakpoint-up("lg") {
+                    top: $fluid-1920-32-24;
+                    left: 0;
+                }
             }
 
-            @include media-breakpoint-up("lg") {
-                text-indent: clamp(22.75rem, 35.25rem + -10.4167vw, 25.875rem);
+            h1 {
+                color: $text-inverse;
+                text-align: center;
+                @include heading-xl;
+
+                @include media-breakpoint-up("md") {
+                    text-indent: clamp(20.75rem, 8.1346rem + 19.7115vw, 25.875rem);
+                    text-align: start;
+                }
+
+                @include media-breakpoint-up("lg") {
+                    text-indent: clamp(22.75rem, 35.25rem + -10.4167vw, 25.875rem);
+                }
             }
         }
     }
@@ -86,9 +103,9 @@
             left: $fluid-1024-40-24;
         }
 
-        @include media-breakpoint-up("lg") {
-            bottom: $fluid-1920-60-40;
-            left: $fluid-1920-60-40;
-        }
+        // @include media-breakpoint-up("lg") {
+        //     bottom: $fluid-1920-60-40;
+        //     left: $fluid-1920-60-40;
+        // }
     }
 }

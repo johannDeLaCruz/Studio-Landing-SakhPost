@@ -1,10 +1,12 @@
 import HeroVideo from '@assets/videos/hero-video.mp4'
 import { VideoPlayer } from '@ui/VideoPlayer'
 import { CircleButton } from '@ui/CircleButton'
+import { useIsNotDesktop } from '@hooks/useMediaQuery'
 
 import styles from './HeroSection.module.scss'
 
 export const HeroSection: React.FC = () => {
+    const isNotDesktop = useIsNotDesktop()
     const videoJsOptions = {
         autoplay: true,
         controls: false,
@@ -38,10 +40,13 @@ export const HeroSection: React.FC = () => {
                 fillMode={'height'}
             />
             <div className={styles.content}>
-                <h1>Разработка сайтов, дизайн, брендинг, продвижение</h1>
+                <div>
+                    {!isNotDesktop && <span>Работаем c 2018</span>}
+                    <h1>Разработка сайтов, дизайн, брендинг, продвижение</h1>
+                </div>
                 <CircleButton type='transparent'>начать проект</CircleButton>
             </div>
-            <span>Работаем c 2018</span>
+            {isNotDesktop && <span>Работаем c 2018</span>}
             <div className={styles.social}>
                 <a href='#'>dprofile</a>
                 <a href='#'>behance</a>
