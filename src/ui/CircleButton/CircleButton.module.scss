@@ -22,6 +22,7 @@
 
 .transparent {
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)) 1;
     background: $bg-primary-alpha;
     backdrop-filter: blur(12px);
     color: $text-inverse;
