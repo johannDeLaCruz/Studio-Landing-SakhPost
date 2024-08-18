@@ -2,19 +2,27 @@ import { Header } from '@components/Header'
 import { Footer } from '@components/Footer'
 import { CTASection } from '@components/CTASection'
 import '@assets/styles/main.scss'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 
 interface LayoutProps {
     children: ReactNode
+    bodyClassName?: string
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+export function Layout({ children, bodyClassName = '' }: LayoutProps) {
+    useEffect(() => {
+        document.body.className = bodyClassName
+
+        return () => {
+            document.body.className = ''
+        }
+    }, [bodyClassName])
+
     return (
         <>
             <Header />
             <main>
-                {children}
-                <CTASection />
+                {children} <CTASection />
             </main>
             <Footer />
         </>

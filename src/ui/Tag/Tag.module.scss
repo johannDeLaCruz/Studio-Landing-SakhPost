@@ -1,0 +1,20 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+
+.root {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-primary, #ddd8e3);
+    color: $text-secondary;
+    text-align: center;
+    @include paragraph-m;
+
+    .icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
