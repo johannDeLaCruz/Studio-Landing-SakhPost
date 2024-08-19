@@ -7,7 +7,7 @@ import { ProcessesSection } from '@components/ProcessesSection'
 
 function App() {
     return (
-        <Layout>
+        <Layout type='light'>
             <HeroSection />
             <AboutSection />
             <CasesSection />

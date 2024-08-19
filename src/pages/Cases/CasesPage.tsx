@@ -5,7 +5,7 @@ import { Tag } from '@ui/Tag'
 
 export const CasesPage: React.FC = () => {
     return (
-        <Layout>
+        <Layout type='dark'>
             <section className={styles.root} aria-labelledby='cases-title'>
                 <div className={styles.head}>
                     <header>

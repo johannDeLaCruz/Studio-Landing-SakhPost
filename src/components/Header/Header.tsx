@@ -4,22 +4,37 @@ import { useIsNotDesktop } from '@hooks/useMediaQuery'
 
 import styles from './Header.module.scss'
 
-export const Header: React.FC = () => {
+type HeaderType = 'light' | 'dark'
+
+type HeaderProps = {
+    type?: HeaderType
+}
+
+export const Header: React.FC<HeaderProps> = ({ type = 'light' }) => {
     const isNotDesktop = useIsNotDesktop()
+    const textStyle = type === 'dark' ? styles.textPrimary : styles.textInverse
     return (
         <header className={styles.root}>
-            <Logo />
+            <Logo type={type} />
             {isNotDesktop ? (
-                <BurguerButton />
+                <BurguerButton type={type} />
             ) : (
                 <nav>
                     <div>
-                        <a href='#cases'>Кейсы</a>
-                        <a href='#contact'>Контакты</a>
+                        <a href='#cases' className={textStyle}>
+                            Кейсы
+                        </a>
+                        <a href='#contact' className={textStyle}>
+                            Контакты
+                        </a>
                     </div>
                     <div>
-                        <a href='#expertise'>Экспертиза</a>
-                        <a href='#processes'>Процессы</a>
+                        <a href='#expertise' className={textStyle}>
+                            Экспертиза
+                        </a>
+                        <a href='#processes' className={textStyle}>
+                            Процессы
+                        </a>
                     </div>
                 </nav>
             )}

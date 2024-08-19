@@ -52,10 +52,17 @@
 
             a {
                 text-decoration: none;
-                color: $text-inverse;
                 cursor: pointer;
                 @include navigation-header;
             }
         }
     }
+}
+
+.textPrimary {
+    color: $text-primary;
+}
+
+.textInverse {
+    color: $text-inverse;
 }

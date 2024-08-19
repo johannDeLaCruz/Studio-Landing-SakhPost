@@ -16,15 +16,26 @@
     }
 
     span {
-        color: $text-inverse;
         font-size: $fluid-768-28-24;
         font-style: normal;
         font-weight: 500;
         line-height: 2rem; /* 133.333% */
         letter-spacing: clamp(-0.035rem, -0.0252rem + -0.0204vw, -0.03rem);
+    }
+}
 
-        &:last-child {
-            opacity: 0.6;
-        }
+.textPrimary {
+    color: $text-primary;
+
+    &:last-child {
+        opacity: 0.35;
+    }
+}
+
+.textInverse {
+    color: $text-inverse;
+
+    &:last-child {
+        opacity: 0.6;
     }
 }

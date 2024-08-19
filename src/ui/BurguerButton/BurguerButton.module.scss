@@ -1,5 +1,5 @@
-@import '@assets/styles/variables';
-@import '@assets/styles/mixins';
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
 
 .root {
     display: flex;
@@ -10,14 +10,23 @@
     gap: 0.25rem;
 
     span {
-        background: $icon-inverse;
         height: 0.125rem;
         flex-shrink: 0;
     }
+
     .long {
         width: 2rem;
     }
+
     .short {
         width: 1.5rem;
     }
+}
+
+.iconPrimary {
+    background: $icon-primary;
+}
+
+.iconInverse {
+    background: $icon-inverse;
 }
