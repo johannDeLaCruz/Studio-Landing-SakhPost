@@ -2,6 +2,7 @@ import { Layout } from '@components/Layout'
 import styles from './CasesPage.module.scss'
 import { TAGS } from '@ui/Tag/constants'
 import { Tag } from '@ui/Tag'
+import { cards } from './constants'
 
 export const CasesPage: React.FC = () => {
     return (
@@ -20,7 +21,22 @@ export const CasesPage: React.FC = () => {
                         ))}
                     </div>
                 </div>
-                <div className={styles.casesList}></div>
+                <div className={styles.casesList}>
+                    {cards.map(({ id, image, title, subtitle, description }) => (
+                        <article key={id}>
+                            <div className={styles.imageWrapper}>
+                                <img src={image} alt={title} />
+                            </div>
+                            <div className={styles.content}>
+                                <h2>{title}</h2>
+                                <div className={styles.descriptionWrapper}>
+                                    <p className={styles.subtitle}>{subtitle}</p>
+                                    <p className={styles.description}>{description}</p>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
             </section>
         </Layout>
     )

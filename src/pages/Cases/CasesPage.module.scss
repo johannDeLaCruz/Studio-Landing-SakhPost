@@ -3,12 +3,14 @@
 
 .root {
     padding-block: 7.5rem 3.5rem;
+    @include global-padding;
 
     .head {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        margin-bottom: 3.5rem;
 
         header {
             display: flex;
@@ -47,6 +49,67 @@
 
         .tags::-webkit-scrollbar {
             display: none;
+        }
+    }
+
+    .casesList {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid $border-primary;
+
+        article {
+            display: flex;
+            padding: var(--blur-m, 1.5rem) 0rem;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            border-bottom: 1px solid $border-primary;
+
+            .imageWrapper {
+                display: flex;
+                height: 16.0625rem;
+                justify-content: center;
+                align-items: center;
+                align-self: stretch;
+                border-radius: 1rem;
+                overflow: hidden;
+            }
+
+            .content {
+                display: flex;
+                padding-top: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                align-self: stretch;
+
+                h2 {
+                    align-self: stretch;
+                    color: $text-primary;
+                    @include heading-m;
+                }
+
+                .descriptionWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    align-self: stretch;
+
+                    .subtitle {
+                        align-self: stretch;
+                        color: $text-secondary;
+                        @include caption;
+                    }
+
+                    .description {
+                        align-self: stretch;
+                        color: $text-primary;
+                        @include paragraph-m;
+                    }
+                }
+            }
         }
     }
 }
