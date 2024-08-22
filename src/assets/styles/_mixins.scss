@@ -156,7 +156,9 @@
 
 @mixin heading-xs {
     font-size: $fluid-768-24-18; // 18px
-    font-weight: 100%;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 100%; /* 1.125rem */
     letter-spacing: -0.02em;
 
     @include media-breakpoint-up("sm") {

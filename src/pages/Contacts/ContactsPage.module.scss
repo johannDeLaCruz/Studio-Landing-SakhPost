@@ -1,0 +1,109 @@
+@import "@assets/styles/variables";
+@import "@assets/styles/mixins";
+
+.root {
+    padding-block: 7.5rem $fluid-768-120-80;
+    @include global-padding;
+
+    .contactsWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: $fluid-768-48-32;
+
+        h1 {
+            color: $text-primary;
+            @include heading-xl;
+        }
+
+        .contacts {
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+            gap: $fluid-768-20-8;
+            padding-bottom: $fluid-768-72-56;
+            border-bottom: 1px solid $border-primary;
+
+            @include media-breakpoint-up("sm") {
+                grid-template-rows: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            div {
+                display: flex;
+                padding: $fluid-768-24-16;
+                height: clamp(7.5rem, 5.1145rem + 10.1781vw, 10rem);
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                align-self: stretch;
+                border-radius: 1rem;
+                background: $bg-primary;
+
+                @include media-breakpoint-up("sm") {
+                    justify-content: space-between;
+                }
+
+                h2 {
+                    color: $text-secondary;
+                    @include caption;
+                }
+
+                p {
+                    color: $text-primary;
+                    align-self: stretch;
+                    @include heading-xs;
+
+                    a {
+                        text-decoration: none;
+                        color: $text-primary;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .addressList {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .addressItem {
+            display: flex;
+            padding-block: $fluid-768-32-24;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $fluid-768-24-16;
+            align-self: stretch;
+            border-bottom: 1px solid var(--border-primary, #ddd8e3);
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $fluid-768-8-4;
+                align-self: stretch;
+
+                h3 {
+                    color: $text-secondary;
+                    @include caption;
+                }
+
+                address {
+                    color: $text-primary;
+                    max-width: clamp(17.5rem, 12.729rem + 20.3562vw, 22.5rem);
+                    align-self: stretch;
+                    @include heading-s;
+                }
+            }
+
+            .iframeWrapper {
+                height: clamp(12.0625rem, -0.5806rem + 53.944vw, 25.3125rem);
+                align-self: stretch;
+                border-radius: $fluid-768-24-16;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { CasesPage } from './pages/Cases'
-// import Contacts from './pages/Contacts'
+import { ContactsPage } from './pages/Contacts'
 
 const router = createBrowserRouter([
     {
@@ -14,10 +14,10 @@ const router = createBrowserRouter([
         path: '/cases',
         element: <CasesPage />,
     },
-    // {
-    //     path: '/contacts',
-    //     element: <Contacts />,
-    // },
+    {
+        path: '/contacts',
+        element: <ContactsPage />,
+    },
 ])
 
 const rootElement = document.getElementById('root')!
