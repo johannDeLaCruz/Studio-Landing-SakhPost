@@ -1,7 +1,7 @@
-import GarsonImage from '@assets/images/garson.png'
-import SakhpostImage from '@assets/images/sakhpost.png'
-import SendanceImage from '@assets/images/sendance.png'
-import SilServiceImage from '@assets/images/sil-service.png'
+import GarsonImage from '@assets/images/case-image-01.jpg'
+import SakhpostImage from '@assets/images/case-image-03.jpg'
+import SendanceImage from '@assets/images/case-image-02.jpg'
+import SilServiceImage from '@assets/images/case-image-03.jpg'
 
 type Card = {
     id: number
