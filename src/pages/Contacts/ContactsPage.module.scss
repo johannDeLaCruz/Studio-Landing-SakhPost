@@ -5,15 +5,29 @@
     padding-block: 7.5rem $fluid-768-120-80;
     @include global-padding;
 
+    @include media-breakpoint-up("md") {
+        padding-block: $fluid-1440-200-120 $fluid-1440-200-120;
+    }
+
     .contactsWrapper {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         gap: $fluid-768-48-32;
+        border-bottom: 1px solid $border-primary;
+
+        @include media-breakpoint-up("lg") {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         h1 {
             color: $text-primary;
             @include heading-xl;
+
+            @include media-breakpoint-up("lg") {
+                width: clamp(33.25rem, 0.25rem + 36.6667vw, 44.25rem);
+            }
         }
 
         .contacts {
@@ -22,11 +36,20 @@
             grid-template-columns: repeat(1, 1fr);
             gap: $fluid-768-20-8;
             padding-bottom: $fluid-768-72-56;
-            border-bottom: 1px solid $border-primary;
 
             @include media-breakpoint-up("sm") {
                 grid-template-rows: repeat(2, 1fr);
                 grid-template-columns: repeat(2, 1fr);
+                max-width: clamp(40.25rem, 59.25rem + -29.6875vw, 45rem);
+                align-self: flex-end;
+            }
+
+            @include media-breakpoint-up("md") {
+                max-width: clamp(40.25rem, 36.25rem + 6.25vw, 41.875rem);
+            }
+
+            @include media-breakpoint-up("lg") {
+                max-width: clamp(41.875rem, 0.625rem + 45.8333vw, 55.625rem);
             }
 
             div {
@@ -77,6 +100,12 @@
             gap: $fluid-768-24-16;
             align-self: stretch;
             border-bottom: 1px solid var(--border-primary, #ddd8e3);
+
+            @include media-breakpoint-up("md") {
+                flex-direction: row;
+                gap: 0;
+                justify-content: space-between;
+            }
 
             .content {
                 display: flex;
