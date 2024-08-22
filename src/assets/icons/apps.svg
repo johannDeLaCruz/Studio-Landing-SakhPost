@@ -1,0 +1,9 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="apps">
+<g id="Group">
+<path id="Vector" d="M2 10C2 5.58172 5.58172 2 10 2H82C86.4183 2 90 5.58172 90 10V150C90 154.418 86.4183 158 82 158H10C5.58172 158 2 154.418 2 150V10Z" stroke="#DDD8E3" stroke-width="2"/>
+<path id="Vector_2" d="M30 80C30 75.5817 33.5817 72 38 72H150C154.418 72 158 75.5817 158 80V136C158 140.418 154.418 144 150 144H38C33.5817 144 30 140.418 30 136V80Z" stroke="#DDD8E3" stroke-width="2"/>
+<path id="Vector_3" d="M134 60C134 77.6731 119.673 92 102 92C84.3269 92 70 77.6731 70 60C70 42.3269 84.3269 28 102 28C119.673 28 134 42.3269 134 60Z" stroke="#DDD8E3" stroke-width="2"/>
+</g>
+</g>
+</svg>

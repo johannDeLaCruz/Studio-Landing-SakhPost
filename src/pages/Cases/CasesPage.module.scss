@@ -2,22 +2,27 @@
 @import "@assets/styles/mixins";
 
 .root {
-    padding-block: 7.5rem 3.5rem;
+    padding-block: 7.5rem $fluid-768-120-80;
     @include global-padding;
 
     .head {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        margin-bottom: 3.5rem;
+        gap: $fluid-768-48-32;
+        margin-bottom: $fluid-768-72-56;
+
+        @include media-breakpoint-up("sm") {
+            margin-inline: clamp(0rem, -1.1927rem + 5.0891vw, 1.25rem);
+        }
 
         header {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
-            align-self: stretch;
+            // align-self: stretch;
+            max-width: clamp(21.4375rem, 18.0382rem + 14.5038vw, 25rem);
 
             h1 {
                 color: $text-primary;
@@ -45,6 +50,11 @@
             white-space: nowrap;
             scrollbar-width: none;
             -ms-overflow-style: none;
+
+            @include media-breakpoint-up("sm") {
+                align-content: flex-start;
+                flex-wrap: wrap;
+            }
 
             &::-webkit-scrollbar {
                 display: none;
@@ -76,26 +86,44 @@
 
             .imageWrapper {
                 display: flex;
-                height: 16.0625rem;
+                height: clamp(16.0625rem, -0.8149rem + 72.0102vw, 33.75rem);
                 justify-content: center;
                 align-items: center;
                 align-self: stretch;
-                border-radius: 1rem;
+                border-radius: $fluid-768-24-16;
                 overflow: hidden;
+
+                @include media-breakpoint-up("md") {
+                    height: clamp(33.75rem, -2.25rem + 75vw, 45.75rem);
+                }
+
+                img {
+                    // height: 100%;
+                    // width: auto;
+                    object-fit: cover;
+                }
             }
 
             .content {
                 display: flex;
-                padding-top: 1rem;
+                padding-top: $fluid-768-24-16;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 0.25rem;
+                gap: $fluid-768-20-4;
                 align-self: stretch;
+
+                @include media-breakpoint-up("sm") {
+                    flex-direction: row;
+                }
 
                 h2 {
                     align-self: stretch;
                     color: $text-primary;
                     @include heading-m;
+
+                    @include media-breakpoint-up("sm") {
+                        flex: 1 0 0;
+                    }
                 }
 
                 .descriptionWrapper {
@@ -104,6 +132,10 @@
                     align-items: flex-start;
                     gap: 1rem;
                     align-self: stretch;
+
+                    @include media-breakpoint-up("sm") {
+                        flex: 1 0 0;
+                    }
 
                     .subtitle {
                         align-self: stretch;

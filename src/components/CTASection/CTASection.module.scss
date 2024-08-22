@@ -62,7 +62,13 @@
                 width: clamp(5rem, 3.5687rem + 6.1069vw, 6.5rem);
                 height: clamp(5rem, 3.5687rem + 6.1069vw, 6.5rem);
                 border-radius: 1.5rem;
-                background: url(<path-to-image>) lightgray -22.001px -8.379px / 155.003% 187.474% no-repeat;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    // width: auto;
+                    object-fit: cover;
+                }
             }
 
             .content {
