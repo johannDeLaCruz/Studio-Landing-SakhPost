@@ -87,7 +87,12 @@
             span:last-child {
                 background-color: $bg-secondary;
                 margin-top: clamp(-1.75rem, -0.7729rem + -2.0356vw, -1.25rem);
+                padding-top: $fluid-768-4-2;
                 @include paragraph-l;
+
+                @include media-breakpoint-up("lg") {
+                    padding-top: clamp(0.25rem, -0.5rem + 0.8333vw, 0.5rem);
+                }
             }
         }
 
