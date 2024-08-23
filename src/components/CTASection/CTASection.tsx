@@ -1,5 +1,5 @@
 import styles from './CTASection.module.scss'
-import Avatar from '@assets/images/Avatar.jpg'
+import AvatarImage from '@assets/images/AvatarImage.jpg'
 import { CircleButton } from '@ui/CircleButton'
 
 export const CTASection: React.FC = () => {
@@ -9,7 +9,7 @@ export const CTASection: React.FC = () => {
                 <h2>Давайте обсудим ваш проект</h2>
                 <div className={styles.manager}>
                     <div className={styles.imageWrapper}>
-                        <img src={Avatar} alt='manager-photo' />
+                        <img src={AvatarImage} alt='manager-photo' />
                     </div>
                     <div className={styles.content}>
                         <p>Это Сергей — наш менеджер, Он c радостью ответит на все ваши вопросы</p>
