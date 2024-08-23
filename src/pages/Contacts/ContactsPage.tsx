@@ -1,5 +1,6 @@
 import { Layout } from '@components/Layout'
 import styles from './ContactsPage.module.scss'
+import ArrowIcon from '@assets/icons/ArrowIcon.svg'
 
 export const ContactsPage: React.FC = () => {
     return (
@@ -13,22 +14,26 @@ export const ContactsPage: React.FC = () => {
                             <p>
                                 <a href='tel:+79099009999'>+7 909 900-99-99</a>
                             </p>
+                            <img src={ArrowIcon} alt='arrow-icon' />
                         </div>
                         <div>
                             <h2>почта</h2>
                             <p>
                                 <a href='mailto:makers@digital.ru'>makers@digital.ru</a>
                             </p>
+                            <img src={ArrowIcon} alt='arrow-icon' />
                         </div>
                         <div>
                             <h2>Телеграм</h2>
                             <p>
                                 <a href='@username'>@username</a>
                             </p>
+                            <img src={ArrowIcon} alt='arrow-icon' />
                         </div>
                         <div>
                             <h2>Время работы</h2>
                             <p>По будням с 10 до 18</p>
+                            <img src={ArrowIcon} alt='arrow-icon' />
                         </div>
                     </div>
                 </div>

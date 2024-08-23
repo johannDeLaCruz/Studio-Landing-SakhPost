@@ -40,16 +40,16 @@
             @include media-breakpoint-up("sm") {
                 grid-template-rows: repeat(2, 1fr);
                 grid-template-columns: repeat(2, 1fr);
-                max-width: clamp(40.25rem, 59.25rem + -29.6875vw, 45rem);
+                width: clamp(40.25rem, 59.25rem + -29.6875vw, 45rem);
                 align-self: flex-end;
             }
 
             @include media-breakpoint-up("md") {
-                max-width: clamp(40.25rem, 36.25rem + 6.25vw, 41.875rem);
+                width: clamp(40.25rem, 36.25rem + 6.25vw, 41.875rem);
             }
 
             @include media-breakpoint-up("lg") {
-                max-width: clamp(41.875rem, 0.625rem + 45.8333vw, 55.625rem);
+                width: clamp(41.875rem, 0.625rem + 45.8333vw, 55.625rem);
             }
 
             div {
@@ -62,9 +62,14 @@
                 align-self: stretch;
                 border-radius: 1rem;
                 background: $bg-primary;
+                position: relative;
 
                 @include media-breakpoint-up("sm") {
                     justify-content: space-between;
+                }
+
+                @include media-breakpoint-up("lg") {
+                    height: clamp(10rem, 2.5rem + 8.3333vw, 12.5rem);
                 }
 
                 h2 {
@@ -81,6 +86,19 @@
                         text-decoration: none;
                         color: $text-primary;
                         cursor: pointer;
+                    }
+                }
+
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    position: absolute;
+                    right: $fluid-768-24-12;
+                    bottom: $fluid-768-24-12;
+
+                    @include media-breakpoint-up("sm") {
+                        right: 1.5rem;
+                        top: 1.5rem;
                     }
                 }
             }
@@ -121,7 +139,7 @@
 
                 address {
                     color: $text-primary;
-                    max-width: clamp(17.5rem, 12.729rem + 20.3562vw, 22.5rem);
+                    max-width: 19.5rem;
                     align-self: stretch;
                     @include heading-s;
                 }
@@ -132,6 +150,21 @@
                 align-self: stretch;
                 border-radius: $fluid-768-24-16;
                 overflow: hidden;
+
+                @include media-breakpoint-up("sm") {
+                    height: clamp(22.625rem, 33.375rem + -16.7969vw, 25.3125rem);
+                    width: clamp(40.25rem, 59.25rem + -29.6875vw, 45rem);
+                }
+
+                @include media-breakpoint-up("md") {
+                    height: clamp(22.625rem, 20.3173rem + 3.6058vw, 23.5625rem);
+                    width: clamp(40.25rem, 36.25rem + 6.25vw, 41.875rem);
+                }
+
+                @include media-breakpoint-up("lg") {
+                    height: clamp(23.5625rem, 0.5rem + 25.625vw, 31.25rem);
+                    width: clamp(41.875rem, 0.625rem + 45.8333vw, 55.625rem);
+                }
             }
         }
     }
