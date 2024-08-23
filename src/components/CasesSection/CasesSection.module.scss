@@ -18,11 +18,73 @@
         display: inline-flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: $fluid-768-24-16;
+        margin-block: $fluid-768-48-32;
 
         .caseCard {
-            border-radius: 1rem;
+            border-radius: $fluid-768-24-16;
             overflow: hidden;
+            position: relative;
+            display: flex;
+            height: clamp(16.0625rem, -11.5496rem + 117.8117vw, 45rem);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: $fluid-768-24-16;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .content {
+                display: flex;
+                padding: 0px 0px $fluid-768-24-8 $fluid-768-24-8;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 0.24rem;
+                position: absolute;
+                bottom: 0px;
+
+                @include media-breakpoint-up("sm") {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .category {
+                    display: flex;
+                    padding: 0.5rem 0.75rem;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: var(--sui-border-radius-3, 0.75rem);
+                    background: var(--bg-inverse-alpha, rgba(13, 6, 22, 0.2));
+                    backdrop-filter: blur(calc(var(--blur-m, 24px) / 2));
+
+                    h3 {
+                        color: $text-inverse;
+                        @include heading-xs;
+                    }
+                }
+
+                .name {
+                    display: flex;
+                    padding: 0.5rem 0.75rem;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: var(--sui-border-radius-3, 12px);
+                    background: $bg-primary;
+
+                    p {
+                        color: $text-primary;
+                        @include heading-xs;
+                    }
+                }
+            }
+        }
+
+        .caseCard:nth-child(even) {
+            width: clamp(16.0625rem, -0.8149rem + 72.0102vw, 33.75rem);
         }
     }
 
