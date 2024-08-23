@@ -21,10 +21,10 @@ export const Header: React.FC<HeaderProps> = ({ type = 'light' }) => {
             ) : (
                 <nav>
                     <div>
-                        <a href='#cases' className={textStyle}>
+                        <a href='/cases' className={textStyle}>
                             Кейсы
                         </a>
-                        <a href='#contact' className={textStyle}>
+                        <a href='/contacts' className={textStyle}>
                             Контакты
                         </a>
                     </div>
