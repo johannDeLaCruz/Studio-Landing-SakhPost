@@ -4,6 +4,9 @@
 .root {
     @include global-padding;
     padding-block: $fluid-768-120-80;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
     @include media-breakpoint-up("md") {
         padding-block: clamp(7.5rem, -4.8077rem + 19.2308vw, 12.5rem);
@@ -21,15 +24,31 @@
         gap: $fluid-768-24-16;
         margin-block: $fluid-768-48-32;
 
+        @include media-breakpoint-up("md") {
+            margin-block: $fluid-1440-64-48;
+        }
+
         .caseCard {
             border-radius: $fluid-768-24-16;
             overflow: hidden;
             position: relative;
             display: flex;
-            height: clamp(16.0625rem, -11.5496rem + 117.8117vw, 45rem);
+            height: clamp(16.0625rem, -0.8149rem + 72.0102vw, 33.75rem);
             flex-direction: column;
             align-items: flex-start;
             gap: $fluid-768-24-16;
+
+            @include media-breakpoint-up("sm") {
+                height: clamp(33.75rem, -2.25rem + 75vw, 45.75rem);
+            }
+
+            @include media-breakpoint-up("md") {
+                height: clamp(39.375rem, 61.4423rem + -24.5192vw, 45.75rem);
+            }
+
+            @include media-breakpoint-up("lg") {
+                height: clamp(39.375rem, 14.0625rem + 28.125vw, 47.8125rem);
+            }
 
             img {
                 width: 100%;
@@ -85,11 +104,34 @@
 
         .caseCard:nth-child(even) {
             width: clamp(16.0625rem, -0.8149rem + 72.0102vw, 33.75rem);
+            aspect-ratio: 1 / 1;
+
+            @include media-breakpoint-up("sm") {
+                width: clamp(33.75rem, -2.25rem + 75vw, 45.75rem);
+            }
+
+            @include media-breakpoint-up("md") {
+                width: clamp(39.375rem, 61.4423rem + -24.5192vw, 45.75rem);
+            }
+
+            @include media-breakpoint-up("lg") {
+                width: clamp(39.375rem, 14.0625rem + 28.125vw, 47.8125rem);
+            }
         }
     }
 
     .buttonWrapper {
         display: flex;
         justify-content: center;
+
+        @include media-breakpoint-up("lg") {
+            position: absolute;
+            display: inline-flex;
+            height: 960px;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            right: clamp(2.5rem, -1.25rem + 4.1667vw, 3.75rem);
+        }
     }
 }
